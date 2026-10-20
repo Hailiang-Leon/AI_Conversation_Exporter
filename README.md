@@ -1,18 +1,10 @@
-# AI Conversation Exporter — MD & JSON
+# AI Conversation Exporter — Markdown & JSON
+
+English | [简体中文](README.zh-CN.md)
 
 A lightweight Microsoft Edge / Chrome extension that exports **ChatGPT** and **Claude** conversations to **Markdown** or **JSON**.
 
 Everything happens locally in your browser. No server, no uploads, no analytics, no account, no paid tier.
-
-## 快速开始（中文）
-
-1. 打开 Edge，进入 `edge://extensions/`，开启右下角的「开发人员模式」
-2. 点击「加载解压缩的扩展」，选择本文件夹（`AI_Conversation_Exporter`）
-3. 打开一个 ChatGPT（`chatgpt.com/c/...`）或 Claude（`claude.ai/chat/...`）对话页
-4. 点击工具栏里的扩展图标，选择「导出 Markdown」或「导出 JSON」
-5. 文件会保存到下载目录，命名为 `<对话标题>-<年月日-时分>.md|json`
-
-界面会自动跟随浏览器 UI 语言切换中文 / English（导出格式名称保持英文）。代码注释和本文档主要是英文。修改代码后需要在扩展页点击「重新加载」，并刷新已打开的对话页面。
 
 ## Features
 
@@ -21,7 +13,7 @@ Everything happens locally in your browser. No server, no uploads, no analytics,
 - **JSON export** — normalized, stable schema (`aice.conversation.v1`); web-search `sources` are always kept in JSON
 - **API first, DOM fallback** — reads the site's own conversation API (using your existing login) for complete data, then falls back to a virtualized-DOM scroll crawler if the API is unavailable
 - **Local only** — the download is created with a Blob URL; no network requests leave the two sites
-- **Bilingual UI** — English and Simplified Chinese, follows the browser UI language automatically; no in-page UI injection
+- **Bilingual UI** — English and Simplified Chinese, follows the browser UI language automatically; no visible UI is injected into the page
 
 ## Install (developer mode)
 
@@ -41,9 +33,9 @@ After updating the code, click **Reload** on the extension card. Existing tabs m
 
 Markdown content options (remembered between runs):
 
-- **Include web-search sources (导出联网检索来源)** — on by default. When on, an answer that used web search gets the original exporters' reference list at the end (`---` + `**Sources:**` + `- [title](url)`). Turn it off to skip those lists.
-- **Timestamps / Model name (时间 / 模型名)** — include the per-message timestamp and the assistant model in the `> time · model` line.
-- **Role labels (角色标签)** — the headings used for each side, default `User` / `Assistant`. Set them to `Prompt` / `Response` to match the ChatGPT exporter exactly.
+- **Include web-search sources** — on by default. When on, an answer that used web search gets the original exporters' reference list at the end (`---` + `**Sources:**` + `- [title](url)`). Turn it off to skip those lists.
+- **Timestamps / Model name** — include the per-message timestamp and the assistant model in the `> time · model` line.
+- **Role labels** — the headings used for each side, default `User` / `Assistant`. Set them to `Prompt` / `Response` to match the ChatGPT exporter exactly.
 
 ## Markdown format
 
