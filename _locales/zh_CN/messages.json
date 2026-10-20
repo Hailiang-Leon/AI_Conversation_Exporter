@@ -1,0 +1,169 @@
+{
+  "extName": {
+    "message": "AI 对话导出器 - MD & JSON"
+  },
+  "extDescription": {
+    "message": "将 ChatGPT 和 Claude 对话导出为 Markdown 或 JSON。完全本地，无服务器、无追踪。"
+  },
+  "actionTitle": {
+    "message": "AI 对话导出器"
+  },
+  "appName": {
+    "message": "AI 对话导出器"
+  },
+  "popupReadingPage": {
+    "message": "正在读取当前页面…"
+  },
+  "exportMarkdown": {
+    "message": "导出 Markdown"
+  },
+  "exportJson": {
+    "message": "导出 JSON"
+  },
+  "markdownContent": {
+    "message": "Markdown 内容"
+  },
+  "includeSources": {
+    "message": "导出联网检索来源（Sources）"
+  },
+  "includeTimestamps": {
+    "message": "时间"
+  },
+  "includeModel": {
+    "message": "模型名"
+  },
+  "roleLabels": {
+    "message": "角色标签"
+  },
+  "footerPrivacy": {
+    "message": "不上传、不追踪 · 无服务器"
+  },
+  "notReadyTitle": {
+    "message": "当前页面不可导出"
+  },
+  "notReadyHint": {
+    "message": "请打开 ChatGPT 或 Claude 的对话页面。"
+  },
+  "untitledConversation": {
+    "message": "未命名对话"
+  },
+  "statusReading": {
+    "message": "正在读取对话…"
+  },
+  "statusExported": {
+    "message": "已导出 $COUNT$ 条消息 · 来源：$SOURCE$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "source": {
+        "content": "$2"
+      }
+    }
+  },
+  "sourceApi": {
+    "message": "站点 API"
+  },
+  "sourceDom": {
+    "message": "页面 DOM（可能不完整）"
+  },
+  "errorNoTab": {
+    "message": "找不到当前标签页。"
+  },
+  "errorNoContentScript": {
+    "message": "无法连接到页面脚本。请打开 ChatGPT 或 Claude 对话页并刷新。"
+  },
+  "errorUnsupported": {
+    "message": "当前页面不受支持。"
+  },
+  "errorExportFailed": {
+    "message": "导出失败。"
+  },
+  "errorOpenConversation": {
+    "message": "请先打开一个已有的对话。"
+  },
+  "errorNoExportable": {
+    "message": "没有找到可导出的消息。"
+  },
+  "errorNoMessagesApi": {
+    "message": "API 未返回任何消息"
+  },
+  "warnApiFallback": {
+    "message": "API 导出失败（$ERROR$），已回退到页面抓取。",
+    "placeholders": {
+      "error": {
+        "content": "$1"
+      }
+    }
+  },
+  "errorNoMessagesAfterFallback": {
+    "message": "$ERROR$。页面抓取也没有找到消息。",
+    "placeholders": {
+      "error": {
+        "content": "$1"
+      }
+    }
+  },
+  "titleChatGPT": {
+    "message": "ChatGPT 对话"
+  },
+  "titleClaude": {
+    "message": "Claude 对话"
+  },
+  "reasonChatGPTNoChat": {
+    "message": "请先打开一个已有的 ChatGPT 对话。"
+  },
+  "reasonClaudeNoChat": {
+    "message": "请先打开一个已有的 Claude 对话。"
+  },
+  "errorSessionRequest": {
+    "message": "会话请求失败：HTTP $STATUS$",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "errorNotLoggedIn": {
+    "message": "未登录或无法获取访问令牌"
+  },
+  "errorConversationRequest": {
+    "message": "对话请求失败"
+  },
+  "errorConversationRequestHttp": {
+    "message": "对话请求失败：HTTP $STATUS$",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "errorOrgRequest": {
+    "message": "组织信息请求失败：HTTP $STATUS$",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "errorNoOrganization": {
+    "message": "未找到可用的组织"
+  },
+  "errorOrgUuid": {
+    "message": "组织缺少 UUID"
+  },
+  "errorHttp": {
+    "message": "HTTP $STATUS$（$URL$）",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      },
+      "url": {
+        "content": "$2"
+      }
+    }
+  },
+  "errorBadResponse": {
+    "message": "响应格式异常"
+  }
+}

@@ -1,0 +1,169 @@
+{
+  "extName": {
+    "message": "AI Conversation Exporter - MD & JSON"
+  },
+  "extDescription": {
+    "message": "Export ChatGPT and Claude conversations to Markdown or JSON. Fully local, no server, no tracking."
+  },
+  "actionTitle": {
+    "message": "AI Conversation Exporter"
+  },
+  "appName": {
+    "message": "AI Conversation Exporter"
+  },
+  "popupReadingPage": {
+    "message": "Reading the current page…"
+  },
+  "exportMarkdown": {
+    "message": "Export Markdown"
+  },
+  "exportJson": {
+    "message": "Export JSON"
+  },
+  "markdownContent": {
+    "message": "Markdown content"
+  },
+  "includeSources": {
+    "message": "Include web-search sources"
+  },
+  "includeTimestamps": {
+    "message": "Timestamps"
+  },
+  "includeModel": {
+    "message": "Model name"
+  },
+  "roleLabels": {
+    "message": "Role labels"
+  },
+  "footerPrivacy": {
+    "message": "No uploads, no tracking · no server"
+  },
+  "notReadyTitle": {
+    "message": "Can't export this page"
+  },
+  "notReadyHint": {
+    "message": "Open a ChatGPT or Claude conversation first."
+  },
+  "untitledConversation": {
+    "message": "Untitled conversation"
+  },
+  "statusReading": {
+    "message": "Reading conversation…"
+  },
+  "statusExported": {
+    "message": "Exported $COUNT$ messages · source: $SOURCE$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "source": {
+        "content": "$2"
+      }
+    }
+  },
+  "sourceApi": {
+    "message": "site API"
+  },
+  "sourceDom": {
+    "message": "page DOM (may be incomplete)"
+  },
+  "errorNoTab": {
+    "message": "No active tab found."
+  },
+  "errorNoContentScript": {
+    "message": "Can't reach the page script. Open a ChatGPT or Claude conversation and refresh the page."
+  },
+  "errorUnsupported": {
+    "message": "This page isn't supported."
+  },
+  "errorExportFailed": {
+    "message": "Export failed."
+  },
+  "errorOpenConversation": {
+    "message": "Open an existing conversation first."
+  },
+  "errorNoExportable": {
+    "message": "No exportable messages found."
+  },
+  "errorNoMessagesApi": {
+    "message": "The API returned no messages"
+  },
+  "warnApiFallback": {
+    "message": "API export failed ($ERROR$); fell back to page scraping.",
+    "placeholders": {
+      "error": {
+        "content": "$1"
+      }
+    }
+  },
+  "errorNoMessagesAfterFallback": {
+    "message": "$ERROR$. Page scraping found no messages either.",
+    "placeholders": {
+      "error": {
+        "content": "$1"
+      }
+    }
+  },
+  "titleChatGPT": {
+    "message": "ChatGPT conversation"
+  },
+  "titleClaude": {
+    "message": "Claude conversation"
+  },
+  "reasonChatGPTNoChat": {
+    "message": "Open an existing ChatGPT conversation first."
+  },
+  "reasonClaudeNoChat": {
+    "message": "Open an existing Claude conversation first."
+  },
+  "errorSessionRequest": {
+    "message": "Session request failed: HTTP $STATUS$",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "errorNotLoggedIn": {
+    "message": "Not signed in or unable to get an access token"
+  },
+  "errorConversationRequest": {
+    "message": "Conversation request failed"
+  },
+  "errorConversationRequestHttp": {
+    "message": "Conversation request failed: HTTP $STATUS$",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "errorOrgRequest": {
+    "message": "Organization request failed: HTTP $STATUS$",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "errorNoOrganization": {
+    "message": "No available organization found"
+  },
+  "errorOrgUuid": {
+    "message": "Organization is missing a UUID"
+  },
+  "errorHttp": {
+    "message": "HTTP $STATUS$ ($URL$)",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      },
+      "url": {
+        "content": "$2"
+      }
+    }
+  },
+  "errorBadResponse": {
+    "message": "Unexpected response format"
+  }
+}

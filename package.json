@@ -1,0 +1,9 @@
+{
+  "name": "ai-conversation-exporter",
+  "version": "0.3.2",
+  "private": true,
+  "description": "Local Markdown / JSON exporter for ChatGPT and Claude conversations.",
+  "scripts": {
+    "test": "node tests/smoke.js && node tests/platforms.test.js && node tests/i18n.test.js"
+  }
+}

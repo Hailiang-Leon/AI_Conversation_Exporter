@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI Conversation Exporter</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="brand">
+        <img class="logo" src="icons/icon128.png" alt="" width="32" height="32" aria-hidden="true" />
+        <div>
+          <h1 data-i18n="appName">AI Conversation Exporter</h1>
+        </div>
+      </div>
+      <span id="platform" class="badge" hidden></span>
+    </header>
+
+    <main>
+      <section id="conversation" class="conversation">
+        <p id="title" class="title" data-i18n="popupReadingPage">Reading the current page…</p>
+        <p id="meta" class="meta"></p>
+      </section>
+
+      <div class="actions">
+        <button id="export-md" class="btn" type="button" aria-pressed="false" disabled>
+          <span data-i18n="exportMarkdown">Export Markdown</span>
+        </button>
+        <button id="export-json" class="btn" type="button" aria-pressed="false" disabled>
+          <span data-i18n="exportJson">Export JSON</span>
+        </button>
+      </div>
+
+      <div class="options">
+        <p class="options-title" data-i18n="markdownContent">Markdown content</p>
+
+        <label class="option option-tight">
+          <input id="include-sources" type="checkbox" />
+          <span data-i18n="includeSources">Include web-search sources</span>
+        </label>
+
+        <div class="option-row">
+          <label class="option option-tight">
+            <input id="include-time" type="checkbox" />
+            <span data-i18n="includeTimestamps">Timestamps</span>
+          </label>
+          <label class="option option-tight">
+            <input id="include-model" type="checkbox" />
+            <span data-i18n="includeModel">Model name</span>
+          </label>
+        </div>
+
+        <div class="labels">
+          <span class="labels-title" data-i18n="roleLabels">Role labels</span>
+          <input id="role-user" type="text" placeholder="User" spellcheck="false" />
+          <input id="role-assistant" type="text" placeholder="Assistant" spellcheck="false" />
+        </div>
+      </div>
+
+      <div id="status" class="status" role="status" aria-live="polite"></div>
+    </main>
+
+    <footer class="footer">
+      <span data-i18n="footerPrivacy">No uploads, no tracking · no server</span>
+    </footer>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

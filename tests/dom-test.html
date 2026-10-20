@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>dom-to-md test</title>
+    <style>
+      body { font: 14px/1.5 -apple-system, sans-serif; margin: 24px; }
+      .prewrap { white-space: pre-wrap; }
+      .katex { font-family: serif; }
+    </style>
+  </head>
+  <body>
+    <h1>DOM to Markdown test</h1>
+
+    <div id="input">
+      <p>Hello <strong>bold</strong> and <em>italic</em> and <code>inline()</code>.</p>
+      <h2>Section</h2>
+      <ul>
+        <li>First item</li>
+        <li>Second item
+          <ul>
+            <li>Nested A</li>
+            <li>Nested B</li>
+          </ul>
+        </li>
+      </ul>
+      <ol start="3">
+        <li>Third</li>
+        <li>Fourth</li>
+      </ol>
+      <blockquote>
+        <p>Quoted line 1</p>
+        <p>Quoted line 2</p>
+      </blockquote>
+      <pre><code class="language-python">print("hi")
+if True:
+    print("ok")</code></pre>
+      <table>
+        <thead>
+          <tr><th>Name</th><th>Value</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>a</td><td>1</td></tr>
+          <tr><td>b</td><td>2</td></tr>
+        </tbody>
+      </table>
+      <p><a href="https://example.com/x">Link</a> and <img src="https://example.com/i.png" alt="pic" /> and <img src="blob:abc" alt="blobimg" /></p>
+      <p><a href="/relative/path">Relative link</a> and <img src="/relative.png" alt="rel" /></p>
+      <p>Visible text <span style="display:none">secret-hidden</span> <span style="visibility:hidden">invisible-hidden</span></p>
+      <p><a href="">Empty link</a> and <img src="" alt="empty" /></p>
+      <hr />
+      <div class="prewrap">line one
+line two
+
+line four</div>
+      <div class="katex"><span class="katex-mathml"><math><semantics><annotation encoding="application/x-tex">E = mc^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true">E=mc2</span></div>
+      <details>
+        <summary>More info</summary>
+        <p>Hidden detail text.</p>
+      </details>
+    </div>
+
+    <pre id="out"></pre>
+
+    <script src="../src/common/dom-to-md.js"></script>
+    <script>
+      const md = AICE.domToMarkdown(document.getElementById('input'));
+      const relativeLink = new URL('/relative/path', location.href).href;
+      const relativeImage = new URL('/relative.png', location.href).href;
+      document.getElementById('out').textContent = md;
+      window.__checks = {
+        bold: md.includes('**bold**'),
+        italic: md.includes('*italic*'),
+        inlineCode: md.includes('`inline()`'),
+        heading: md.includes('## Section'),
+        nestedList: md.includes('- Second item') && md.includes('  - Nested A'),
+        orderedList: md.includes('3. Third'),
+        blockquote: md.includes('> Quoted line 1'),
+        codeFence: md.includes('```python'),
+        table: md.includes('| Name | Value |'),
+        link: md.includes('[Link](https://example.com/x)'),
+        image: md.includes('![pic](https://example.com/i.png)'),
+        relativeLink: md.includes(`[Relative link](${relativeLink})`),
+        relativeImage: md.includes(`![rel](${relativeImage})`),
+        emptyLink: md.includes('Empty link') && !md.includes(`[Empty link](${location.href})`),
+        emptyImage: md.includes('[empty]') && !md.includes(`![empty](${location.href})`),
+        hiddenText: !md.includes('secret-hidden') && !md.includes('invisible-hidden'),
+        blobImage: md.includes('[blobimg]'),
+        hr: md.includes('---'),
+        prewrap: md.includes('line one\nline two\n\nline four'),
+        katex: md.includes('$E = mc^2$'),
+        details: md.includes('<details><summary>More info</summary>') && md.includes('Hidden detail text.'),
+        noButtons: !md.includes('Copy')
+      };
+    </script>
+  </body>
+</html>
