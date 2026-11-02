@@ -23,25 +23,44 @@ The archive has `manifest.json` at its root, contains only runtime files, and ex
 Register for the Microsoft Edge program in Partner Center:
 
 1. Go to [Partner Center → Microsoft Edge](https://partner.microsoft.com/dashboard/microsoftedge/public/login).
-2. Sign in with a Microsoft account. A GitHub account can also be used to create the required Microsoft account.
-3. Select **Individual** or **Company**. Individual is normally faster to verify.
-4. Choose a public **Publisher display name**. It will appear on the store listing.
-5. Accept the App Developer Agreement and complete email/account verification.
+2. Sign in with a **personal Microsoft account** (Outlook/Live/Hotmail). Work and school accounts are not supported. You can also sign in with a personal GitHub account; Microsoft creates and links a Microsoft account automatically.
+3. If the registration form does not open, go to **Account settings → Programs** and click **Get started** on the Microsoft Edge card.
+4. Select **Account country/region**. This cannot be changed after enrollment.
+5. Select **Individual**. Individual verification is shorter and only checks that the publisher display name is available. The account type cannot be changed after enrollment.
+6. Enter a public **Publisher display name** (maximum 50 characters). This is shown on the store listing and must be a name you have the right to use.
+7. Enter **Contact info** and accept the **App Developer Agreement**.
+8. Click **Finish** and wait for the verification email. You can prepare the submission while verification is pending.
 
-There is no Edge registration fee. The certification review can take up to seven business days.
+There is no Edge registration fee. The certification review can take up to seven business days after submission.
 
 ## 2. Store listing fields
 
-**Extension name** (from `manifest.json`):
+**Extension name** (from `manifest.json`, read-only in Partner Center):
+
+English:
 
 ```text
 AI Conversation Exporter - MD & JSON
 ```
 
-**Short description** (from `manifest.json`):
+Simplified Chinese:
+
+```text
+AI 对话导出器 - MD & JSON
+```
+
+**Short description** (from `manifest.json`, read-only in Partner Center):
+
+English:
 
 ```text
 Export ChatGPT and Claude conversations to Markdown or JSON. Fully local, no server, no tracking.
+```
+
+Simplified Chinese:
+
+```text
+将 ChatGPT 和 Claude 对话导出为 Markdown 或 JSON。完全本地，无服务器、无追踪。
 ```
 
 **Category:** `Productivity`
@@ -64,7 +83,9 @@ https://github.com/Hailiang-Leon/AI_Conversation_Exporter/issues
 https://hailiang-leon.github.io/AI_Conversation_Exporter/privacy.html
 ```
 
-**Search terms** (6 terms, within the 7-term / 21-word limit):
+**Search terms** (6 terms each, within the 7-term / 21-word limit):
+
+English:
 
 ```text
 ChatGPT export
@@ -73,6 +94,17 @@ conversation backup
 Markdown
 JSON
 AI chat export
+```
+
+Simplified Chinese:
+
+```text
+ChatGPT 导出
+Claude 导出
+对话备份
+Markdown
+JSON
+AI 对话导出
 ```
 
 ## 3. Full description — English
@@ -131,6 +163,8 @@ The extension reads website content and conversation text locally when the user 
 
 Select the categories that match the actual behavior in the Partner Center form — normally **Website content** and **Personal communications**. Do not select categories the extension does not access. In the explanation, state that all processing is local and that no data is collected or transmitted to the developer.
 
+The extension also reads the site's existing access token in memory to call the site's own API, and reads the existing `_account` cookie value to identify a ChatGPT workspace. It does not store or transmit either value. If Partner Center treats this transient credential use as **Authentication information**, select that category as well; the privacy policy already discloses it.
+
 ### Privacy policy
 
 Use:
@@ -172,7 +206,18 @@ No test account is bundled with the package. A free ChatGPT or Claude account an
 
 Do not use ChatGPT or Claude logos in the store listing or promotional art. Descriptive references such as "for ChatGPT and Claude" are fine, but the listing must not imply official affiliation.
 
-## 8. Submission flow
+## 8. Language rows
+
+Partner Center reads `default_locale`, `_locales`, and the `__MSG_*__` manifest fields, and should create two **Store listings** rows:
+
+- English
+- Simplified Chinese (`zh_CN`)
+
+For each row, provide the matching full description from sections 3 and 4 above, and upload `store/edge/logo-300.png`. Use the **Duplicate** action to copy the logo and screenshot from one language to the other. The extension name and short description are read-only and come from the package.
+
+If only one language row appears, confirm that `manifest.json` uses `__MSG_extName__` and `__MSG_extDescription__`, that `default_locale` is set, and that both `_locales/en` and `_locales/zh_CN` contain `messages.json`.
+
+## 9. Submission flow
 
 1. Complete Partner Center registration and verification.
 2. Open **Microsoft Edge → Create new extension**.
@@ -180,7 +225,7 @@ Do not use ChatGPT or Claude logos in the store listing or promotional art. Desc
 4. Set visibility to **Public** and select all markets.
 5. Fill in the category, website, support contact, and mature-content fields.
 6. Complete the **Privacy** page with the single purpose, permission justifications, remote-code answer, data usage, and privacy policy URL.
-7. Add the English and Chinese store listings. Upload `store/edge/logo-300.png` and `store/edge/screenshot-1.png`.
+7. Fill in both language rows. Each row needs its full description and the logo. Upload `store/edge/logo-300.png` and `store/edge/screenshot-1.png`, then duplicate them to the other language.
 8. Paste the certification notes and submit.
 9. After certification, the listing becomes public and updates are delivered through the store.
 
