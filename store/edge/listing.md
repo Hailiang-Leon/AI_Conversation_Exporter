@@ -166,7 +166,7 @@ No test account is bundled with the package. A free ChatGPT or Claude account an
 |---|---|---|
 | Extension package | ZIP with `manifest.json` at root | `AI_Conversation_Exporter-v0.3.2.zip` |
 | Store logo | 300×300 recommended, 128×128 minimum | `store/edge/logo-300.png` |
-| Screenshot | Optional, 1280×800 or 640×480, up to 6 | Recommended: 1–3 screenshots |
+| Screenshot | 1280×800 or 640×480, up to 6 | `store/edge/screenshot-1.png` |
 | Small promotional tile | Optional, 440×280 | Optional |
 | Large promotional tile | Optional, 1400×560 | Optional |
 
@@ -180,7 +180,7 @@ Do not use ChatGPT or Claude logos in the store listing or promotional art. Desc
 4. Set visibility to **Public** and select all markets.
 5. Fill in the category, website, support contact, and mature-content fields.
 6. Complete the **Privacy** page with the single purpose, permission justifications, remote-code answer, data usage, and privacy policy URL.
-7. Add the English and Chinese store listings. Upload `store/edge/logo-300.png` and at least one screenshot.
+7. Add the English and Chinese store listings. Upload `store/edge/logo-300.png` and `store/edge/screenshot-1.png`.
 8. Paste the certification notes and submit.
 9. After certification, the listing becomes public and updates are delivered through the store.
 
