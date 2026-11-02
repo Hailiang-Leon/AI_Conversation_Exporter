@@ -160,6 +160,8 @@ The extension:
 - does not use analytics or telemetry,
 - keeps only UI preferences (format toggles, role labels) in `chrome.storage.local`.
 
+See [PRIVACY.md](PRIVACY.md) for the full policy.
+
 ## Project layout
 
 ```

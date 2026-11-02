@@ -160,6 +160,8 @@ node tests/i18n.test.js     # 语言包一致性
 - 不使用统计或遥测；
 - 仅在 `chrome.storage.local` 中保存 UI 偏好（选项开关、角色标签）。
 
+完整隐私政策见 [PRIVACY.md](PRIVACY.md)。
+
 ## 项目结构
 
 ```
