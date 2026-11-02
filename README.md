@@ -4,7 +4,7 @@ English | [简体中文](README.zh-CN.md)
 
 A lightweight Microsoft Edge / Chrome extension that exports **ChatGPT** and **Claude** conversations to **Markdown** or **JSON**.
 
-Everything happens locally in your browser. No server, no uploads, no analytics, no account, no paid tier.
+Everything happens locally in your browser. No server, no uploads, no analytics, no sign-up, no paid tier.
 
 ## Features
 

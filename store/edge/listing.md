@@ -110,13 +110,13 @@ AI 对话导出
 ## 3. Full description — English
 
 ```text
-AI Conversation Exporter is a local-only browser extension that saves your ChatGPT and Claude conversations as clean Markdown or structured JSON. Open a conversation, click the extension icon, and choose a format. The Markdown export keeps headings, code blocks, tables, lists, math, images, and web-search sources, so the result is easy to read, search, or paste into another AI tool. The JSON export provides a stable schema with roles, timestamps, model names, content blocks, and sources for archiving or programmatic use. All processing happens in your browser. There is no server, no upload, no account, no analytics, no tracking, and no paid tier. The extension uses your existing login only to read the conversation you are viewing; it does not send your data anywhere else. Export options let you include or hide web-search sources, timestamps, and model names, and customize the role labels. Both English and Simplified Chinese interfaces are included.
+AI Conversation Exporter is a local-only browser extension that saves your ChatGPT and Claude conversations as clean Markdown or structured JSON. Open a conversation, click the extension icon, and choose a format. The Markdown export keeps headings, code blocks, tables, lists, math, images, and web-search sources, so the result is easy to read, search, or paste into another AI tool. The JSON export provides a stable schema with roles, timestamps, model names, content blocks, and sources for archiving or programmatic use. All processing happens in your browser. There is no server, no upload, no sign-up, no analytics, no tracking, and no paid tier. The extension uses your existing login only to read the conversation you are viewing; it does not send your data anywhere else. Export options let you include or hide web-search sources, timestamps, and model names, and customize the role labels. Both English and Simplified Chinese interfaces are included.
 ```
 
 ## 4. Full description — 简体中文
 
 ```text
-AI Conversation Exporter 是一款完全本地运行的浏览器扩展，可将 ChatGPT 和 Claude 对话导出为清晰的 Markdown 或结构化 JSON。打开一个对话，点击扩展图标并选择格式即可。Markdown 导出会保留标题、代码块、表格、列表、数学公式、图片和联网检索来源，方便阅读、搜索或粘贴到其他 AI 工具中继续分析。JSON 导出使用稳定的 schema，保留角色、时间、模型、内容块和来源，适合归档或程序处理。所有处理都在浏览器本地完成：没有服务器、没有上传、没有账号、没有统计、没有追踪，也没有付费版本。扩展仅使用你当前的登录状态读取正在查看的对话，不会把数据发送到其他服务器。你可以选择是否包含联网检索来源、时间戳和模型名，并自定义角色标签。界面支持英文和简体中文。
+AI Conversation Exporter 是一款完全本地运行的浏览器扩展，可将 ChatGPT 和 Claude 对话导出为清晰的 Markdown 或结构化 JSON。打开一个对话，点击扩展图标并选择格式即可。Markdown 导出会保留标题、代码块、表格、列表、数学公式、图片和联网检索来源，方便阅读、搜索或粘贴到其他 AI 工具中继续分析。JSON 导出使用稳定的 schema，保留角色、时间、模型、内容块和来源，适合归档或程序处理。所有处理都在浏览器本地完成：没有服务器、没有上传、没有注册、没有统计、没有追踪，也没有付费版本。扩展仅使用你当前的登录状态读取正在查看的对话，不会把数据发送到其他服务器。你可以选择是否包含联网检索来源、时间戳和模型名，并自定义角色标签。界面支持英文和简体中文。
 ```
 
 ## 5. Privacy and permissions answers
