@@ -177,15 +177,27 @@ The policy covers local processing, the existing site session, `chrome.storage.l
 
 ## 6. Certification notes for reviewers
 
+Select **Yes, I need to provide credentials, accounts, or other info for testers**, because testers need their own ChatGPT or Claude account. Do not share your personal account password.
+
+Paste this into **Notes for certification**:
+
 ```text
 AI Conversation Exporter is a local-only export tool for ChatGPT and Claude.
 
+Test account:
+Testers need their own free ChatGPT (https://chatgpt.com) or Claude (https://claude.ai) account and at least one existing conversation. No test credentials or shared account are provided. A free account is sufficient; a paid plan is not required.
+
 Test steps:
-1. Sign in to ChatGPT (https://chatgpt.com) or Claude (https://claude.ai) with a free account.
+1. Sign in to ChatGPT or Claude with a free account.
 2. Open any existing conversation.
 3. Click the AI Conversation Exporter toolbar icon.
 4. Click "Export Markdown" and confirm a .md file downloads.
 5. Click "Export JSON" and confirm a .json file downloads.
+
+Expected behavior:
+- The popup shows the conversation title and enables both export buttons.
+- The downloaded Markdown contains the conversation with role headings.
+- The downloaded JSON contains the conversation schema.
 
 The extension uses the reviewer's existing site session only to read the conversation being viewed. It requests data only from the same site (chatgpt.com, chat.openai.com, or claude.ai). No credentials, conversation content, or analytics are sent to the developer.
 
