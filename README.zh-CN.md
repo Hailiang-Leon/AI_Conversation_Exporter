@@ -6,6 +6,8 @@
 
 所有处理都在浏览器本地完成：无服务器、无上传、无统计、无需注册、无付费版本。
 
+> **Microsoft Edge 安装：** 在 [Microsoft Edge 加载项商店](https://microsoftedge.microsoft.com/addons/detail/ai-conversation-exporter-/hclfooinomdoheddmnjccjicnjhmdkkn) 安装 AI 对话导出器。
+
 ## 功能
 
 - **一个扩展，支持两个平台** — `chatgpt.com`、`chat.openai.com`、`claude.ai`
@@ -15,14 +17,24 @@
 - **完全本地** — 使用 Blob URL 创建下载；不会向这两个站点之外的服务器发送请求
 - **双语界面** — 支持英文和简体中文，自动跟随浏览器 UI 语言；不向页面注入可见 UI
 
-## 安装（开发者模式）
+## 安装
 
-1. 打开 Edge，进入 `edge://extensions/`（Chrome 为 `chrome://extensions/`）。
-2. 开启 **开发者模式**。
-3. 点击 **加载解压缩的扩展**，选择本文件夹。
-4. 打开一个 ChatGPT 或 Claude 对话页，点击扩展图标，选择导出格式。
+### Microsoft Edge（推荐）
 
-更新代码后，在扩展卡片上点击 **重新加载**。已打开的标签页需要刷新一次，以注入新的 content script。
+从 Microsoft Edge 加载项商店安装，商店版本会自动更新。
+
+[AI 对话导出器 - MD & JSON](https://microsoftedge.microsoft.com/addons/detail/ai-conversation-exporter-/hclfooinomdoheddmnjccjicnjhmdkkn)
+
+### Chrome 或手动安装
+
+1. 从 [Releases](https://github.com/Hailiang-Leon/AI_Conversation_Exporter/releases/latest) 下载最新 ZIP。
+2. 解压 ZIP。
+3. 打开 Chrome，进入 `chrome://extensions/`（本地 Edge 构建用 `edge://extensions/`）。
+4. 开启 **开发者模式**。
+5. 点击 **加载解压缩的扩展**，选择包含 `manifest.json` 的文件夹。
+6. 打开一个 ChatGPT 或 Claude 对话页，点击扩展图标，选择导出格式。
+
+手动加载的版本更新后，在扩展卡片上点击 **重新加载**。已打开的标签页需要刷新一次，以注入新的 content script。
 
 ## 使用
 

@@ -57,6 +57,38 @@
       color: var(--muted);
       font-size: 19px;
     }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 0 0 30px;
+    }
+    .install,
+    .secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .install {
+      background: var(--brand);
+      color: #fff;
+    }
+    .install:hover {
+      filter: brightness(0.95);
+    }
+    .secondary {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      color: var(--fg);
+    }
+    .secondary:hover {
+      border-color: var(--brand);
+    }
     .card {
       padding: 20px 22px;
       border: 1px solid var(--line);
@@ -83,9 +115,15 @@
     <h1>Export ChatGPT &amp; Claude conversations locally.</h1>
     <p class="lede">Markdown and JSON exports. No server, no uploads, no analytics.</p>
 
+    <div class="actions">
+      <a class="install" href="https://microsoftedge.microsoft.com/addons/detail/ai-conversation-exporter-/hclfooinomdoheddmnjccjicnjhmdkkn">Install for Microsoft Edge</a>
+      <a class="secondary" href="https://github.com/Hailiang-Leon/AI_Conversation_Exporter/releases/latest">Download ZIP</a>
+    </div>
+
     <section class="card">
       <h2>Links</h2>
       <ul>
+        <li><a href="https://microsoftedge.microsoft.com/addons/detail/ai-conversation-exporter-/hclfooinomdoheddmnjccjicnjhmdkkn">Microsoft Edge Add-ons</a></li>
         <li><a href="privacy.html">Privacy policy</a></li>
         <li><a href="https://github.com/Hailiang-Leon/AI_Conversation_Exporter">Source code and documentation</a></li>
         <li><a href="https://github.com/Hailiang-Leon/AI_Conversation_Exporter/releases">Downloads</a></li>

@@ -6,6 +6,8 @@ A lightweight Microsoft Edge / Chrome extension that exports **ChatGPT** and **C
 
 Everything happens locally in your browser. No server, no uploads, no analytics, no sign-up, no paid tier.
 
+> **Install for Microsoft Edge:** [AI Conversation Exporter - MD & JSON](https://microsoftedge.microsoft.com/addons/detail/ai-conversation-exporter-/hclfooinomdoheddmnjccjicnjhmdkkn) on the Microsoft Edge Add-ons store.
+
 ## Features
 
 - **Two platforms, one extension** — `chatgpt.com`, `chat.openai.com`, `claude.ai`
@@ -15,14 +17,24 @@ Everything happens locally in your browser. No server, no uploads, no analytics,
 - **Local only** — the download is created with a Blob URL; no network requests leave the two sites
 - **Bilingual UI** — English and Simplified Chinese, follows the browser UI language automatically; no visible UI is injected into the page
 
-## Install (developer mode)
+## Install
 
-1. Open Edge and go to `edge://extensions/` (Chrome: `chrome://extensions/`).
-2. Enable **Developer mode**.
-3. Click **Load unpacked** and select this folder.
-4. Open a ChatGPT or Claude conversation, click the extension icon, choose a format.
+### Microsoft Edge (recommended)
 
-After updating the code, click **Reload** on the extension card. Existing tabs must be refreshed once so the new content script is injected.
+Install from the Microsoft Edge Add-ons store. The store version updates automatically.
+
+[AI Conversation Exporter - MD & JSON on Microsoft Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/ai-conversation-exporter-/hclfooinomdoheddmnjccjicnjhmdkkn)
+
+### Chrome or manual installation
+
+1. Download the latest ZIP from [Releases](https://github.com/Hailiang-Leon/AI_Conversation_Exporter/releases/latest).
+2. Extract the ZIP.
+3. Open Chrome and go to `chrome://extensions/` (for a local Edge build: `edge://extensions/`).
+4. Enable **Developer mode**.
+5. Click **Load unpacked** and select the extracted folder containing `manifest.json`.
+6. Open a ChatGPT or Claude conversation, click the extension icon, choose a format.
+
+After updating a manually loaded build, click **Reload** on the extension card. Existing tabs must be refreshed once so the new content script is injected.
 
 ## Usage
 

@@ -17,6 +17,9 @@ The archive has `manifest.json` at its root, contains only runtime files, and ex
 - Markets: all markets
 - Category: **Productivity**
 - Mature content: **No**
+- Store listing: <https://microsoftedge.microsoft.com/addons/detail/ai-conversation-exporter-/hclfooinomdoheddmnjccjicnjhmdkkn>
+- Status: **In the Store**
+- Publisher display name: **Hailiang Leon**
 
 ## 1. Developer account
 
@@ -226,6 +229,8 @@ Partner Center reads `default_locale`, `_locales`, and the `__MSG_*__` manifest 
 - Simplified Chinese (`zh_CN`)
 
 For each row, provide the matching full description from sections 3 and 4 above, and upload `store/edge/logo-300.png`. Use the **Duplicate** action to copy the logo and screenshot from one language to the other. The extension name and short description are read-only and come from the package.
+
+> **Important:** Do not swap the descriptions or search terms. The English row must use the English description and English search terms; the Simplified Chinese row must use the Chinese versions. These fields are easy to paste into the wrong row.
 
 If only one language row appears, confirm that `manifest.json` uses `__MSG_extName__` and `__MSG_extDescription__`, that `default_locale` is set, and that both `_locales/en` and `_locales/zh_CN` contain `messages.json`.
 
